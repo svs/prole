@@ -1,0 +1,73 @@
+body {
+  background-image: url(/images/evil_tv_small.jpg);
+  background-size: 100%;
+  font-family: Tahoma, Helvetica;
+  color: white;
+  font-size: 1.5em;
+}
+
+#header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 1.5em;
+  font-size: 2em;
+  font-weight: bold;
+  background: #333; 
+  color: #ff3c00; 
+  opacity: 0.8;
+  width: 100%;
+  line-height: 1.5em;
+  padding-left: 20px;
+  font-family: Tahoma, Helvetica;
+  font-weight: bolder;
+}
+#footer {
+  position: absolute;
+  left: 0px;
+  height: 2em;
+  font-size: 1em;
+  font-weight: bold;
+  background: #333; 
+  color: #ff3c00; 
+  opacity: 0.8;
+  width: 100%;
+  line-height: 2em;
+  bottom: 0px;
+}
+.presentation {
+  position: absolute;
+  top: 3em;
+}
+.slide {
+  background-color: grey;
+  float: left;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+.x {
+  display:none;
+}
+.black {
+  background-color: black;
+  color: white;
+  padding: 4px;
+}
+.black a{
+  color: lightgreen;
+  text-decoration: none;
+}
+.black a:hover{
+  text-decoration: underline;
+}
+.subtext {
+  font-size: 19px;
+  background-color: #4c4c4c;
+  padding: 10px;
+  -moz-border-radius: 0px 10px 0px 10px;
+  border-radius: 0px 10px 0px 10px;
+  
+}

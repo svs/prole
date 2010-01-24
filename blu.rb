@@ -7,8 +7,8 @@ require 'rss/maker'
 
 def entries
   @posts = {}
-  ((Dir.entries("./views/posts/").reject{|e| e.match(/~$/)}) - [".","..","layout.erb",".git",".gitignore", "images", "layouts"]).each_with_index do |post, i|
-    @posts[File.mtime("views/posts/#{post}") + i] = post
+  ((Dir.entries("./views/posts/").reject{|e| e.match(/~$/)}) - [".","..","layout.erb",".git",".gitignore", "images", "layouts", "stylesheets", "javascripts"]).each_with_index do |post, i|
+    @posts[File.atime("views/posts/#{post}") + i] = post
   end
   @posts
 end
