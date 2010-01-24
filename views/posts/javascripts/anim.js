@@ -1,6 +1,6 @@
 $(document).ready(function() {
   // queue the effects
-  timeout = 000;
+  timeout = 2000;
   _q = 0;
   q = new Array();
   q = [    function(){
