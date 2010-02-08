@@ -5,13 +5,13 @@
   </head>
   <body>
     <div id="header">
-      <h1>prole.in</h1>
+      <h1><a href="/" style="color: white; text-decoration:none">prole.in</a></h1>
     </div>
     <div id="left-container">
       &nbsp;
     </div>
     <div id="main-container">
-      <div id="body" <%= request.path_info.match(/blog\//) ? 'style="background: white"' : '' %>>
+      <div id="body">
       <%= @output || yield %>
       </div>
 <% if request.path_info.match(/blog\//) %>
