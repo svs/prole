@@ -30,13 +30,15 @@ a:hover {
 
 #main-container {
   float: left;
-  width: 64%;
+  width: 74%;
   min-height: 600px;
   text-align: justify;
   position: relative;
   top: 50px;
-  background:url(/site-images/glow.png);
+  background:url(/site-images/bigpaper.jpg);
   color: black;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
 }
 
 #body {
@@ -50,7 +52,9 @@ a:hover {
 #body a {
 }
 #body a:hover {
-  background: #c40000;
+  background: #90251b;
+  text-shadow: 0 2px 3px #333;
+  color: white;
 }
 #right-container {
   float: left;
@@ -107,10 +111,15 @@ a:hover {
 
 #entries a {
   text-decoration: none;
-  background: #f9f9f9;
+  background: url(/site-images/paper.jpg);
+  line-height: 1.8;
+  margin: 10px;
+  padding: 5px;
 }
 
 
 #entries a:hover {
-  background: #f00;
+  background: #90251b;
+  color: white;
+  text-shadow: 0 2px 3px #333;
 }
