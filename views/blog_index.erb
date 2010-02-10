@@ -1,6 +1,9 @@
 <div id="entries">
-  <% entries.keys.sort.reverse.each do |key| %>
-    <a href="blog/<%= CGI::escape(@posts[key]) %>"><%= @posts[key].split(".")[0] %></a>
-    </li>
-  <% end %>
+  <ul>
+    <% entries.keys.sort.reverse.each do |key| %>
+      <li>
+	<a href="blog/<%= CGI::escape(@posts[key]) %>"><%= @posts[key].split(".")[0] %></a>
+      </li>
+    <% end %>
+   </ul>
 </div>
