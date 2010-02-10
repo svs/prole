@@ -1,9 +1,9 @@
 body {
-  font-family: Baskerville;
+  font-family: "Lucida Sans", Verdana;
   font-size: 18px;
-  margin: 4px;
+  margin: 0px;
   padding: 0px;
-  background: url(/site-images/background-red.jpg);
+  background: #cecece;
 }
 
 a {
@@ -11,115 +11,41 @@ a {
 }
 
 #header {
-  width: 100%;
-  height: 60px;
-}
-
-#header img {
-  position: absolute;
-  right: 10px;
-
-}
-a:hover {
-  text-decoration: underline;
-}
-#left-container {
-  float: left;
-  width: 10px;
-}
-
-#main-container {
-  float: left;
-  width: 74%;
-  min-height: 600px;
-  text-align: justify;
-  position: relative;
-  top: 50px;
-  background:url(/site-images/bigpaper.jpg);
-  color: black;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-}
-
-#body {
-  padding: 20px;
-  min-height: 400px;
-  line-height: 1.5em;
-  margin-top: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-}
-#body a {
-}
-#body a:hover {
-  background: #90251b;
-  text-shadow: 0 2px 3px #333;
-  color: white;
-}
-#right-container {
-  float: left;
-  width: 22%;
-  margin-left: 35px;
-  position: relative;
-  top :-125px;
-}
-
-
-#header h1 {
-  font-family: Georgia;
   text-align: right;
-  letter-spacing: -0.07em;
-  font-size: 55px;
-  color: white;
-  text-shadow: 0 2px 3px #333;
-}
-#header h1 {
-  font-size: 80px;
   margin: 0px;
-  font-weight: 400;
-  margin-right: 35px;
+  position: relative;
+  top: -30px;
+  height: 150px;
+}
+#header h1 a{
+  font-size: 3em;
+  color: 264c4c;
+  text-shadow: 3px 3px 6px #0e1c1c;
+  margin: 0px;
+  letter-spacing: -0.07em;
+  margin-right: 25px;
 }
 
 #nav {
-  text-transform: uppercase;
-  font-weight: bold;
-  padding: 2px 15px;
-  text-align: left;
-  background: #c40000;
+  background: url(/site-images/top_bg.png);
   color: white;
-  height: 21px;
+  text-align: right;
+  height: 33px;
+  font-weight: bold;
 }
 
 #nav a {
+  color: #e5cf73;
   text-decoration: none;
-  color: white;
+  margin: 5px;
 }
 
-#kun {
-  position: absolute;
-  top :4px;
-  right: 0px;
-  background: url(/kun.png) no-repeat;
-  z-index: 10;
-  width: 280px;
-  height: 125px;
+#nav a:hover {
+  color: #00CCB2;
 }
 
-#entries {
-  font-size: 24px;
-}
-
-#entries a {
-  text-decoration: none;
-  background: url(/site-images/paper.jpg);
-  line-height: 1.8;
-  margin: 10px;
-  padding: 5px;
-}
-
-
-#entries a:hover {
-  background: #90251b;
-  color: white;
-  text-shadow: 0 2px 3px #333;
+#body {
+  position: relative; 
+  top: -50px;
+  padding: 25px;
 }
