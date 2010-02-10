@@ -3,7 +3,9 @@ body {
   font-size: 18px;
   margin: 0px;
   padding: 0px;
-  background: #cecece;
+/*  background: #cecece;*/
+  background: url(/site-images/howsitgoin.jpg) no-repeat;
+  background-position: bottom right
 }
 
 a {
@@ -19,11 +21,13 @@ a {
 }
 #header h1 a{
   font-size: 3em;
-  color: 264c4c;
-  text-shadow: 3px 3px 6px #0e1c1c;
+  color: #00adad;
+  text-shadow: 2px 2px 6px #0e1c1c;
   margin: 0px;
   letter-spacing: -0.07em;
   margin-right: 25px;
+  position: relative;
+  top: -10px;
 }
 
 #nav {
@@ -48,4 +52,17 @@ a {
   position: relative; 
   top: -50px;
   padding: 25px;
+  background: url(/site-images/trans.png);
+  margin: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  width: 70%;
+  min-height: 300px;
+}
+
+#subtitle {
+  width: 170px;
+  position: absolute;
+  right: 85px;
+  top: 100px;
 }
