@@ -63,6 +63,10 @@ a {
 #subtitle {
   width: 170px;
   position: absolute;
-  right: 85px;
-  top: 100px;
+  right: 125px;
+  top: 130px;
+  background: black;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+
 }
