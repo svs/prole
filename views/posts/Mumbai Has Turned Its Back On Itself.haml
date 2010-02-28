@@ -6,7 +6,9 @@ Bollywood chose to end the strike with a choice that destroyed it. The first fil
 Here are some pictures I took at PVR a few weeks ago, and one of Fun Republic today. These are of course isolated incidents and I present them as indications rather than proof of a crisis. Judge for yourself from your own experience.
 
 <notextile>
-<%= image_tag "fun republic.jpg", :width => "49%", :style => "float:left" %><% Dir.entries("public/images").select{|n| n.match(/pvr/)}.each do |i| %><%= image_tag i, :width => "49%", :style => "float:left" %><% end %>
+= image_tag "fun republic.jpg", :width => "49%", :style => "float:left" 
+- Dir.entries("public/images").select{|n| n.match(/pvr/)}.each do |i|
+  = image_tag i, :width => "49%", :style => "float:left" 
 </notextile>
 
 
