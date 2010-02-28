@@ -1,0 +1,7 @@
+%h1{:style => 'padding-left: 20px; margin: 0px;'} blog
+#entries
+  %ul
+    - entries.keys.sort.reverse.each do |key|
+      %li
+        %a{:href => "blog/#{CGI::escape(@posts[key])}"}
+          = @posts[key].split(".")[0]

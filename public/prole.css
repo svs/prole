@@ -1,74 +1,82 @@
 body {
-  font-family: "Lucida Sans", Verdana;
-  font-size: 18px;
+  font-family: Palatino, "Lucida Sans", Verdana;
+  font-size: 23px;
   margin: 0px;
   padding: 0px;
-/*  background: #cecece;*/
-  background: url(/site-images/howsitgoin.jpg) no-repeat;
-  background-position: bottom right
+  height: 100%;
 }
-
+#piet {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  display: block;
+}
+h1#title {
+  color: #777777;
+  letter-spacing: 0.7em;
+  text-align: center;
+}
+#index-nav {
+  text-align: center;
+  width: 100%;
+}
+#container {
+  width: 66%;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  border-bottom: solid black 3px;
+}
+#container ul { list-style-type: none; }
 a {
   color: black;
-}
-
-#header {
-  text-align: right;
-  margin: 0px;
-  position: relative;
-  top: -30px;
-  height: 150px;
-}
-#header h1 a{
-  font-size: 3em;
-  color: #00adad;
-  text-shadow: 2px 2px 6px #0e1c1c;
-  margin: 0px;
-  letter-spacing: -0.07em;
-  margin-right: 25px;
-  position: relative;
-  top: -10px;
-}
-
-#nav {
-  background: url(/site-images/top_bg.png);
-  color: white;
-  text-align: right;
-  height: 33px;
-  font-weight: bold;
-}
-
-#nav a {
-  color: #e5cf73;
   text-decoration: none;
-  margin: 5px;
 }
-
-#nav a:hover {
-  color: #00CCB2;
+a:hover { text-decoration: underline; }
+#left {
+  width: 22%;
+  float: left;
+  height: 100%;
 }
-
-#body {
-  position: relative; 
-  top: -50px;
-  padding: 25px;
-  background: url(/site-images/trans.png);
-  margin: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  width: 70%;
-  min-height: 300px;
+#left #title {
+  text-transform: uppercase;
+  font-size: 4em;
+  word-wrap: break-word;
+  background-color: #cc2328;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 0.8em;
+  font-family: Helvetica;
+  padding: 2px;
+  height: 36%;
+  border-bottom: solid 6px black;
 }
-
-#subtitle {
-  width: 170px;
-  position: absolute;
-  right: 125px;
-  top: 110px;
-  background: black;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  color: white;
+#main {
+  margin-left: 22%;
+  min-height: 80%;
+}
+#main #top {
+  height: 18%;
+  border-left: solid 6px black;
+}
+#main #yellow {
+  background-color: yellow;
+  border-bottom: solid 6px black;
+  border-top: solid 6px black;
+  border-left: solid 6px black;
+}
+#main #yellow #content {
+  background-color: white;
+  width: 95%;
+  margin: 0px;
+  word-wrap: break-word;
   padding: 10px;
-
+  border-right: solid 6px black;
+  text-align: justify;
+}
+#main #bottom #blue {
+  width: 50%;
+  background-color: blue;
+  border-left: solid 6px black;
+  border-right: solid 6px black;
 }

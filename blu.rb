@@ -1,31 +1,31 @@
 require 'rubygems'
 require 'sinatra'
 require 'RedCloth'
-require 'erb'
+require 'haml'
 require 'cgi'
 require 'rss/maker'
 
 def entries
   @posts = {}
-  ((Dir.entries("./views/posts/").reject{|e| e.match(/~$/)}) - [".","..","layout.erb",".git",".gitignore", "images", "layouts", "stylesheets", "javascripts"]).each_with_index do |post, i|
+  ((Dir.entries("./views/posts/").reject{|e| e.match(/~$/)}) - [".","..","layout.haml",".git",".gitignore", "images", "layouts", "stylesheets", "javascripts"]).each_with_index do |post, i|
     @posts[File.mtime("views/posts/#{post}") + i] = post
   end
   @posts
 end
 
 get "/" do
-  RedCloth.new(erb :index).to_html
+  RedCloth.new(haml :index, :layout => false).to_html
 end
 
 get "/blog/:title" do
-  if params[:title].index(".erb")
+  if params[:title].index(".haml")
     t = params[:title].split(".")
     @title = t[0]
     if t.size == 3
-      layout = File.read("views/posts/layouts/_#{t[1]}.erb")
+      layout = File.read("views/posts/layouts/_#{t[1]}.haml")
     end
-    @erb = erb File.read("views/posts/#{params[:title]}"), :layout => layout
-    @output = RedCloth.new(@erb).to_html
+    @output = haml RedCloth.new(File.read("views/posts/#{params[:title]}")).to_html, :layout => layout
+    # @output = RedCloth.new(@haml).to_html
     @output
   else
     @title = params[:title]
@@ -34,7 +34,7 @@ get "/blog/:title" do
 end
 
 get "/blog" do
-  erb :blog_index
+  haml :blog_index
 end
 
 get "/feed" do
