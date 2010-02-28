@@ -4,26 +4,26 @@
     <link href="/prole.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <div id="nav">
-      <a href="/blog">Blog</a>
-    </div>
-    <div id="header">
-      <h1><a href="/" style="text-decoration:none">prole.in</a></h1>
-      <div id="subtitle">speaking truth to power since 2010</div>
-    </div>
     <div id="container">
-      <div id="left-container">
+      <div id="left">
+	<div id="title">Prole.in</div>
+	<div id="red"></div>
       </div>
-      <div id="body">
-	<%= @output || yield %>
-      </div>
-      <% if request.path_info.match(/blog\//) %>
-      <div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/prole/embed.js"></script><noscript><a href="http://disqus.com/forums/prole/?url=ref">View the discussion thread.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-<% end %>
-    </div>
-    <div id="right-container">
-    </div>
-    <script type="text/javascript">
+      <div id="main">
+	<div id="top">
+	</div>
+	<div id="yellow">
+	  <div id="content">
+      	    <%= @output || yield %>
+	    <% if request.path_info.match(/blog\//) %>
+      	      <div id="disqus_thread"></div>
+	      <script type="text/javascript" src="http://disqus.com/forums/prole/embed.js"></script>
+	      <noscript><a href="http://disqus.com/forums/prole/?url=ref">View the discussion thread.</a></noscript>
+	      <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+	    <% end %>
+	  </div>
+	</div>
+      <script type="text/javascript">
       //<![CDATA[
         (function() {
           var links = document.getElementsByTagName('a');
@@ -36,6 +36,12 @@
         document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/prole/get_num_replies.js' + query + '"></' + 'script>');
   })();
 //]]>
-    </script>
+      </script>
+    </div>
+	<div id="bottom">
+	  <div id="blue">home</div>
+	  <div id="afterblue"></div>
+      </div>
+
   </body>
 </html>
