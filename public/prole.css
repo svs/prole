@@ -1,6 +1,6 @@
 body {
-  font-family: Palatino, "Lucida Sans", Verdana;
-  font-size: 23px;
+  font-family: Palatino, "Times New Roman", "Lucida Sans", Verdana;
+  font-size: 18px;
   margin: 0px;
   padding: 0px;
   height: 100%;
@@ -11,17 +11,13 @@ body {
   margin-top: 20px;
   display: block;
 }
-h1#title {
-  color: #777777;
-  letter-spacing: 0.7em;
-  text-align: center;
-}
+h1#title { color: #777777; }
 #index-nav {
   text-align: center;
   width: 100%;
 }
 #container {
-  width: 66%;
+  width: 76%;
   margin-right: auto;
   margin-left: auto;
   display: block;
@@ -40,7 +36,7 @@ a:hover { text-decoration: underline; }
 }
 #left #title {
   text-transform: uppercase;
-  font-size: 4em;
+  font-size: 3em;
   word-wrap: break-word;
   background-color: #cc2328;
   font-weight: 700;
@@ -49,7 +45,7 @@ a:hover { text-decoration: underline; }
   font-family: Helvetica;
   padding: 2px;
   height: 36%;
-  border-bottom: solid 6px black;
+  border-bottom: solid 3px black;
 }
 #main {
   margin-left: 22%;
@@ -57,13 +53,13 @@ a:hover { text-decoration: underline; }
 }
 #main #top {
   height: 18%;
-  border-left: solid 6px black;
+  border-left: solid 3px black;
 }
 #main #yellow {
   background-color: yellow;
-  border-bottom: solid 6px black;
-  border-top: solid 6px black;
-  border-left: solid 6px black;
+  border-bottom: solid 3px black;
+  border-top: solid 3px black;
+  border-left: solid 3px black;
 }
 #main #yellow #content {
   background-color: white;
@@ -71,12 +67,12 @@ a:hover { text-decoration: underline; }
   margin: 0px;
   word-wrap: break-word;
   padding: 10px;
-  border-right: solid 6px black;
+  border-right: solid 3px black;
   text-align: justify;
 }
 #main #bottom #blue {
   width: 50%;
   background-color: blue;
-  border-left: solid 6px black;
-  border-right: solid 6px black;
+  border-left: solid 3px black;
+  border-right: solid 3px black;
 }

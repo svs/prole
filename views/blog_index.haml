@@ -1,15 +1,8 @@
-%h1{:style => 'padding-left: 20px; margin: 0px;'} blog
 #entries
   %ul
-    - entries.keys.sort.reverse[0..9].each do |key|
+    - entries.keys.sort.reverse.each do |key|
       %li
         %a{:href => "blog/#{CGI::escape(@posts[key])}"}
           = @posts[key].split(".")[0]
-  %a{:href => "#", :onclick => "$('#more').toggle()"}
-    == ... more entries
-  #more{:style => 'display:none'}
-    %ul
-      - entries.keys.sort.reverse[10..-1].each do |key|
-        %li
-          %a{:href => "blog/#{CGI::escape(@posts[key])}"}
-            = @posts[key].split(".")[0]
+          == (#{key.strftime("%B %d, %Y")})
+
