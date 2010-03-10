@@ -4,10 +4,11 @@
   %link{:href => '/prole.css', :rel => 'stylesheet', :type => 'text/css'}
   %script{:src => '/javascripts/jquery.js', :type => 'text/javascript'}
 %body
+  #title
+    %h1
+      %a{:href => "/"}
+        prole.in
   #container
-    %h1#title 
-      %a{:href => "/blog"}
-        svs's blog
     #content
       - if @title
         %h2

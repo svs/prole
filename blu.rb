@@ -14,7 +14,7 @@ def entries
 end
 
 get "/" do
-  RedCloth.new(haml :index, :layout => false).to_html
+  RedCloth.new(haml :blog_index).to_html
 end
 
 get "/blog/:title" do
@@ -68,6 +68,7 @@ end
 def update_blog(request)
   `cd views/posts;git pull`
   write_feed(request)
+  `touch tmp/restart.txt`
   "blog updated"
 end
 
