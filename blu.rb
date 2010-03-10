@@ -80,6 +80,10 @@ post '/update_blog' do # for github post-commit hook
   update_blog(request)
 end
 
+get "/:page" do
+  haml RedCloth.new(File.read("views/#{params[:page]}")).to_html
+end
+
 helpers do
   def image_tag(filename, options={})
     unless options.empty?
