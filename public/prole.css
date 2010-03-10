@@ -14,6 +14,12 @@ a {
   position: relative;
   top: -20px;
 }
+#title #nav {
+  position: relative;
+  top: -50px;
+  left: 250px;
+}
+#title #nav a { color: #521501; }
 #title h1 { text-shadow: 2px; }
 #title h1 a {
   text-decoration: none;
