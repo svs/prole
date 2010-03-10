@@ -3,7 +3,6 @@ body {
   font-size: 25px;
   margin: 0px;
   padding: 0px;
-  height: 100%;
   margin-left: 20%;
   margin-right: 20%;
 }
@@ -11,20 +10,19 @@ a {
   text-decoration: none;
   color: #026d80;
 }
+#title {
+  position: relative;
+  top: -20px;
+}
 #title h1 { text-shadow: 2px; }
 #title h1 a {
   text-decoration: none;
   color: #fc4303;
-}
-#content {
-  margin: 20px;
-  padding: 10px;
-  -moz-border-radius: 10px;
-  -moz-box-shadow: 5px 2px 2px white;
+  font-size: 2em;
 }
 h1 {
   font-family: Georgia;
-  font-size: 3em;
+  font-size: 2.5em;
 }
 h2 { font-size: 2em; }
 ul, li { list-style-type: circle; }
