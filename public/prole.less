@@ -1,97 +1,50 @@
-@piet-border: solid 3px black;
 body {
   font-family: Palatino, "Times New Roman", "Lucida Sans", Verdana;
-  font-size: 18px;
+  font-size: 25px;
   margin: 0px;
   padding: 0px;
   height: 100%;
-}
-
-#piet {
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 20px;
-  display: block;
-}
-
-h1#title {
-  color: #777;
-}
-
-#index-nav {
-  text-align: center;
-  width: 100%;
-}
-
-#container {
-  width: 76%;
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
-  border-bottom: solid black 3px;
-  ul {
-    list-style-type: none;
-  }
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 a {
-  color: black;
   text-decoration: none;
-  :hover {
-    text-decoration: underline;
-  }
+  color: #026D80;
 }
 
-#left {
-  width: 22%;
-  float: left;
-  height: 100%;
-  #title {
-    text-transform: uppercase;
-    font-size: 3em;
-    word-wrap: break-word;
-    background-color: #cc2328;
-    font-weight: 700;
-    letter-spacing: -0.05em;
-    line-height: 0.8em;
-    font-family: Helvetica;
-    padding: 2px;
-    height: 36%;
-    border-bottom: @piet-border;
-  }
-}
-
-#main {
-  margin-left: 22%;
-  min-height: 80%;
-  #top {
-    height: 18%;
-    border-left: @piet-border;
-  }
-  #yellow {
-    background-color: yellow;
-    border-bottom: @piet-border;
-    border-top: @piet-border;
-    border-left: @piet-border;
-	
-    #content {
-	background-color: white;
-	width: 95%;
-	margin: 0px;
-	word-wrap: break-word;
-	padding: 10px;
-    	border-right: @piet-border;
-	text-align: justify;
-}
-  }
-  #bottom {
-    #blue {
-      width: 50%;
-      background-color: blue;
-      border-left: @piet-border;
-      border-right: @piet-border;
-
+#title {
+  h1 {
+    text-shadow: 2px;
+    a {
+      text-decoration: none;
+      color: #FC4303;
     }
   }
 }
+#container {
 
+}
+
+#content {
+  margin: 20px;
+  padding: 10px;
+  -moz-border-radius: 10px;
+  -moz-box-shadow: 5px 2px 2px white;
+}
+
+h1 {
+  font-family: Georgia;
+  font-size: 3em;
+}
+
+h2 {
+ font-size: 2em;
+}
+
+ul {
+  list-style-type: circle;
+}
+li {
+  list-style-type: circle;
+}
