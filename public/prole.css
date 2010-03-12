@@ -10,6 +10,15 @@ a {
   text-decoration: none;
   color: #026d80;
 }
+.cap {
+  text-transform: uppercase;
+  color: white;
+  background: #fc4303;
+  margin: 0px;
+  padding: 3px;
+  position: relative;
+  left: 5px;
+}
 #title {
   position: relative;
   top: -20px;

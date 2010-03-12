@@ -5,10 +5,23 @@ require 'haml'
 require 'cgi'
 require 'rss/maker'
 
+class Date
+  def inspect
+    strftime "%m %d %Y"
+  end
+end
+
 def entries
   @posts = {}
   ((Dir.entries("./views/posts/").reject{|e| e.match(/~$/)}) - [".","..","layout.haml",".git",".gitignore", "images", "layouts", "stylesheets", "javascripts"]).each_with_index do |post, i|
-    @posts[File.mtime("views/posts/#{post}") + i] = post
+    File.open("views/posts/#{post}") do |file|
+      begin
+        @date = Time.parse(file.gets)
+      rescue ArgumentError
+        @date = file.mtime
+      end
+    end
+    @posts[@date] = post
   end
   @posts
 end
@@ -24,7 +37,7 @@ get "/blog/:title" do
     if t.size == 3
       layout = File.read("views/posts/layouts/_#{t[1]}.haml")
     end
-    @output = haml RedCloth.new(File.read("views/posts/#{params[:title]}")).to_html, :layout => layout
+    @output = haml ":plain\n\t" + RedCloth.new(File.read("views/posts/#{params[:title]}")).to_html, :layout => layout
     # @output = RedCloth.new(@haml).to_html
     @output
   else
@@ -83,6 +96,7 @@ end
 get "/:page" do
   haml RedCloth.new(File.read("views/#{params[:page]}")).to_html
 end
+
 
 helpers do
   def image_tag(filename, options={})
