@@ -13,9 +13,9 @@ a {
 .cap {
   text-transform: uppercase;
   color: #521501;
-  background: #fc4303;
+  background: #fc6e3c;
   margin: 0px;
-  padding: 3px;
+  padding: 0px 3px;
   position: relative;
   left: 5px;
 }
