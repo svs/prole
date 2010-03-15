@@ -15,13 +15,11 @@ def entries
   @posts = {}
   ((Dir.entries("./views/posts/").reject{|e| e.match(/~$/)}) - [".","..","layout.haml",".git",".gitignore", "images", "layouts", "stylesheets", "javascripts"]).each_with_index do |post, i|
     File.open("views/posts/#{post}") do |file|
-      begin
-        @date = Time.parse(file.gets)
-      rescue ArgumentError
-        @date = file.mtime
-      end
+      x = file.gets
+      @date = Time.parse(x)
+      @posts[@date] = post
+      # exceptions get caught by the block
     end
-    @posts[@date] = post
   end
   @posts
 end
