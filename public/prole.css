@@ -1,6 +1,6 @@
 body {
-  font-family: Palatino, "Times New Roman", "Lucida Sans", Verdana;
-  font-size: 25px;
+  font-family: Arial, Palatino, "Times New Roman", "Lucida Sans", Verdana;
+  font-size: 22px;
   margin: 0px;
   padding: 0px;
   margin-left: 20%;
@@ -33,7 +33,7 @@ a {
 #title h1 a {
   text-decoration: none;
   color: #fc4303;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 h1 {
   font-family: Georgia;
@@ -41,3 +41,4 @@ h1 {
 }
 h2 { font-size: 2em; }
 ul, li { list-style-type: circle; }
+#content { text-align: justify; }
