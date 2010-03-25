@@ -69,7 +69,7 @@ def write_feed(request)
       port = request.env["SERVER_PORT"]
       host_root = "http://#{request.env["SERVER_NAME"]}" + (port == "80" ? "" : ":#{port}")
       i.link = host_root + "/blog/#{CGI::escape(entry)}"
-      i.description = File.read("views/posts/#{entry}")
+      i.description = haml ":plain\n\t" + RedCloth.new(File.read("views/posts/#{params[:title]}")).to_html, :layout => layout
       i.date = atime
     end
   end
