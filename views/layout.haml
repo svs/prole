@@ -4,23 +4,23 @@
   %link{:href => '/prole.css', :rel => 'stylesheet', :type => 'text/css'}
   %script{:src => '/javascripts/jquery.js', :type => 'text/javascript'}
 %body
-  #title
-    %h1
-      %a{:href => "/"}
-        prole.in
-    #nav
-      %a{:href => "/about"}
-        %span.cap a
-        bout 
-      | 
-      %a{ :href => "/"}
-        %span.cap b
-        log
-      | 
-      %a{:href => "http://github.com/svs"}
-        %span.cap c
-        ode
   #container
+    #title
+      %h1
+        %a{:href => "/"}
+          prole.in
+      #nav
+        %a{:href => "/about"}
+          %span.cap a
+          bout 
+          | 
+        %a{ :href => "/"}
+          %span.cap b
+          log
+          | 
+        %a{:href => "http://github.com/svs"}
+          %span.cap c
+          ode
     #content
       - if @title
         %h1
