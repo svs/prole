@@ -4,6 +4,7 @@ require 'RedCloth'
 require 'haml'
 require 'cgi'
 require 'rss/maker'
+require 'chronic'
 
 class Date
   def inspect
@@ -15,10 +16,8 @@ def entries
   @posts = {}
   ((Dir.entries("./views/posts/").reject{|e| e.match(/~$/)}) - [".","..","layout.haml",".git",".gitignore", "images", "layouts", "stylesheets", "javascripts"]).each_with_index do |post, i|
     File.open("views/posts/#{post}") do |file|
-      x = file.gets
-      @date = Time.parse(x)
-      @posts[@date] = post
-      # exceptions get caught by the block
+      @date = Chronic.parse(file.gets)
+      @posts[@date] = post if @date
     end
   end
   @posts
