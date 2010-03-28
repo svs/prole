@@ -6,18 +6,14 @@ require 'cgi'
 require 'rss/maker'
 require 'chronic'
 
-class Date
-  def inspect
-    strftime "%m %d %Y"
-  end
-end
 
 def entries
   @posts = {}
-  ((Dir.entries("./views/posts/").reject{|e| e.match(/~$/)}) - [".","..","layout.haml",".git",".gitignore", "images", "layouts", "stylesheets", "javascripts"]).each_with_index do |post, i|
+  Dir.entries("./views/posts/").reject{|f| f.match(/~$/)}.each_with_index do |post, i|
     File.open("views/posts/#{post}") do |file|
-      @date = Chronic.parse(file.gets)
-      @posts[@date] = post if @date
+      # read the first line of the file and check if its a date unless it's a directory
+      date = Chronic.parse(file.gets) unless File::directory?("views/posts/#{post}")
+      @posts[date] = post if date
     end
   end
   @posts
@@ -28,15 +24,11 @@ get "/" do
 end
 
 get "/blog/:title" do
-  if params[:title].index(".haml")
-    t = params[:title].split(".")
-    @title = t[0]
-    if t.size == 3
-      layout = File.read("views/posts/layouts/_#{t[1]}.haml")
-    end
-    @output = haml ":plain\n\t" + RedCloth.new(File.read("views/posts/#{params[:title]}")).to_html, :layout => layout
-    # @output = RedCloth.new(@haml).to_html
-    @output
+  _title = params[:title].split(".")
+  if ["haml","erb"].include?(_title[-1])
+    @title = _title[0]
+    layout = File.read("views/posts/layouts/_#{t[1]}.haml") if _title.size == 3
+    haml ":plain\n\t" + RedCloth.new(File.read("views/posts/#{params[:title]}")).to_html, :layout => layout
   else
     @title = params[:title]
     File.read("views/posts/#{params[:title]}")
@@ -103,5 +95,11 @@ helpers do
       @options = " #{attrs.sort * ' '}" unless attrs.empty?
     end
     "<img src='/images/#{filename}' #{@options}/>"
+  end
+end
+
+class Date
+  def inspect
+    strftime "%m %d %Y"
   end
 end
