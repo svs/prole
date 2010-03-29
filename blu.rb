@@ -27,7 +27,7 @@ get "/blog/:title" do
   _title = params[:title].split(".")
   if ["haml","erb"].include?(_title[-1])
     @title = _title[0]
-    layout = File.read("views/posts/layouts/_#{t[1]}.haml") if _title.size == 3
+    layout = File.read("views/posts/layouts/_#{_title[1]}.haml") if _title.size == 3
     haml ":plain\n\t" + RedCloth.new(File.read("views/posts/#{params[:title]}")).to_html, :layout => layout
   else
     @title = params[:title]
