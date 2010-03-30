@@ -1,0 +1,5 @@
+- entries.keys.sort.reverse.each do |d|
+  %a.l{:href => "/blog/#{entries[d][:title]}"}
+    .post{:style => "background: url(#{entries[d][:pic]})"}
+      .p
+        = entries[d][:title].split(".")[0]
