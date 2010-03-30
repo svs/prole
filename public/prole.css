@@ -5,6 +5,8 @@ body {
   padding: 0px;
   margin-left: 20%;
   margin-right: 20%;
+  background: #111;
+  color: #a6a6a6;
 }
 a {
   text-decoration: none;
@@ -28,7 +30,7 @@ a {
   top: -50px;
   left: 250px;
 }
-#title #nav a { color: #521501; }
+#title #nav a { color: #fc4303 }
 #title h1 { text-shadow: 2px; }
 #title h1 a {
   text-decoration: none;
@@ -75,4 +77,9 @@ a.l {
   bottom: 0px;
   width: 100%;
   color: white;
+}
+
+img {
+  width: 500px;
+  margin: 6px;
 }
