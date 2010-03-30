@@ -53,6 +53,7 @@ ul, li { list-style-type: circle; }
   border-style: solid;
   border-width: 1px;
   -moz-box-shadow: 2px 2px 2px #888;
+  box-shadow: 2px 2px 2px #888;
 }
 a.l {
   color: white;
@@ -66,7 +67,7 @@ a.l {
 .p {
   background: url(/site-images/trans.png);
   -moz-opacity: 0.7;
-  width: 102%;
+  width: 100%;
 }
 
 .p a{
