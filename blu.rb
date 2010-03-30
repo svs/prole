@@ -64,11 +64,11 @@ def write_feed(request)
 
     entries.each do |atime,entry|
       i = m.items.new_item
-      i.title = entry
+      i.title = entry[:title]
       port = request.env["SERVER_PORT"]
       host_root = "http://#{request.env["SERVER_NAME"]}" + (port == "80" ? "" : ":#{port}")
-      i.link = host_root + "/blog/#{CGI::escape(entry)}"
-      i.description = haml ":plain\n\t" + RedCloth.new(File.read("views/posts/#{params[:title]}")).to_html, :layout => layout
+      i.link = host_root + "/blog/#{CGI::escape(entry[:title])}"
+      i.description = RedCloth.new(File.read("views/posts/#{entry[:title]}")).to_html
       i.date = atime
     end
   end
@@ -76,7 +76,7 @@ def write_feed(request)
 end
 
 def update_blog(request)
-  `cd views/posts;git pull`
+  `git pull`
   write_feed(request)
   `rm _posts.yml`
   `touch tmp/restart.txt`
