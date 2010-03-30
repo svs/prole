@@ -16,7 +16,7 @@ def entries
       unless File::directory?("views/posts/#{post}")
         date = Chronic.parse(file.gets) 
         img = file.read.match(/\!.*\!/u)
-        pic = img[0].gsub(/\!\{.*\}/,'').gsub('!','') if img
+        pic = img ? img[0].gsub(/\!\{.*\}/,'').gsub('!','') : "/site-images/nopic.jpg"
         @posts[date] = {:title => post, :pic => pic} if date
       end
     end
