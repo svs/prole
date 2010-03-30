@@ -64,7 +64,7 @@ a.l {
   width: 100%;
 }
 .p {
-  background-color: black;
+  background: url(/site-images/trans.png);
   -moz-opacity: 0.7;
   width: 102%;
 }
