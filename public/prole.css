@@ -42,8 +42,36 @@ h1 {
 h2 { font-size: 2em; }
 ul, li { list-style-type: circle; }
 #content { text-align: justify; }
+.post {
+  float: left;
+  width: 23%;
+  margin: 1%;
+  align: left;
+  text-align: left;
+  height: 215px;
+  border-color: #CBC8C2 #9D9C97 #9D9C97 #CBC8C2;
+  border-style: solid;
+  border-width: 1px;
+  -moz-box-shadow: 2px 2px 2px #888;
+}
+a.l {
+  color: white;
+  letter-spacing: -0.02em;
+  font-weight: bold;
+  font-family: Helvetica;
+}
+.post img {
+  width: 100%;
+}
+.p {
+  background-color: black;
+  -moz-opacity: 0.7;
+  width: 102%;
+}
 
-img {
-  margin: 5px;
-  align: center;
+.p a{
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  color: white;
 }

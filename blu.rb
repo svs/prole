@@ -8,19 +8,27 @@ require 'chronic'
 
 
 def entries
+  return YAML.load(File.read("_posts.yml")) if File.exist?("_posts.yml")
   @posts = {}
   Dir.entries("./views/posts/").reject{|f| f.match(/~$/)}.each_with_index do |post, i|
     File.open("views/posts/#{post}") do |file|
       # read the first line of the file and check if its a date unless it's a directory
-      date = Chronic.parse(file.gets) unless File::directory?("views/posts/#{post}")
-      @posts[date] = post if date
+      unless File::directory?("views/posts/#{post}")
+        date = Chronic.parse(file.gets) 
+        img = file.read.match(/\!.*\!/u)
+        pic = img[0].gsub(/\!\{.*\}/,'').gsub('!','') if img
+        @posts[date] = {:title => post, :pic => pic} if date
+      end
     end
+  end
+  File.open("_posts.yml","w") do |f|
+    f.write(@posts.to_yaml)
   end
   @posts
 end
 
 get "/" do
-  RedCloth.new(haml :blog_index).to_html
+  RedCloth.new(haml :sexy_blog_index).to_html
 end
 
 get "/blog/:title" do
@@ -70,7 +78,9 @@ end
 def update_blog(request)
   `cd views/posts;git pull`
   write_feed(request)
+  `rm _posts.yml`
   `touch tmp/restart.txt`
+  entries
   "blog updated"
 end
 
