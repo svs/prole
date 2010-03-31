@@ -27,7 +27,7 @@ a {
 }
 #title #nav {
   position: relative;
-  top: -50px;
+  top: -100px;
   left: 250px;
 }
 #title #nav a { color: #fc4303 }
@@ -38,12 +38,15 @@ a {
   font-size: 1.5em;
 }
 h1 {
-  font-family: Georgia;
-  font-size: 2.5em;
+  font-family: Helvetica;
+  font-size: 3em;
+  color: red;
+  letter-spacing: -0.06em;
+  font-weight: bold;
 }
 h2 { font-size: 2em; }
 ul, li { list-style-type: circle; }
-#content { text-align: justify; }
+#content { text-align: justify; position: relative; top: -120px;}
 .post {
   float: left;
   width: 23%;
@@ -81,6 +84,5 @@ a.l {
 
 img {
   margin: 4px 10px;
-  padding: 3px;
-  background: white;
+  border: solid 3px white;
 }
