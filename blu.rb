@@ -93,8 +93,14 @@ post '/update_blog' do # for github post-commit hook
 end
 
 get "/:page" do
+  raise Sinatra::NotFound unless File.exists?("views/#{params[:page]}")
   haml RedCloth.new(File.read("views/#{params[:page]}")).to_html
 end
+
+not_found do
+  "yikes"
+end
+
 
 
 helpers do
