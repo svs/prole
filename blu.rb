@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'sinatra'
 require 'RedCloth'
-require 'haml'
+require 'erb'
 require 'cgi'
 require 'rss/maker'
 require 'chronic'
@@ -28,7 +28,7 @@ def entries
 end
 
 get "/" do
-  RedCloth.new(haml :sexy_blog_index).to_html
+  erb :sexy_blog_index
 end
 
 get "/blog/:title" do
@@ -36,7 +36,7 @@ get "/blog/:title" do
   if ["haml","erb"].include?(_title[-1])
     @title = _title[0]
     layout = File.read("views/posts/layouts/_#{_title[1]}.haml") if _title.size == 3
-    haml ":plain\n\t" + RedCloth.new(File.read("views/posts/#{params[:title]}")).to_html, :layout => layout
+    erb RedCloth.new(File.read("views/posts/#{params[:title]}")).to_html, :layout => layout
   else
     @title = params[:title]
     File.read("views/posts/#{params[:title]}")
@@ -44,7 +44,7 @@ get "/blog/:title" do
 end
 
 get "/blog" do
-  haml :blog_index
+  erb :sexy_blog_index
 end
 
 get "/feed" do
@@ -94,7 +94,7 @@ end
 
 get "/:page" do
   raise Sinatra::NotFound unless File.exists?("views/#{params[:page]}")
-  haml RedCloth.new(File.read("views/#{params[:page]}")).to_html
+  erb RedCloth.new(File.read("views/#{params[:page]}")).to_html
 end
 
 not_found do

@@ -1,47 +1,42 @@
-<html>
-  <head>
-    <title>Prole.in</title>
-    <link href="/prole.css" rel="stylesheet" type="text/css">
-  </head>
-  <body>
-    <div id="container">
-      <div id="left">
-	<div id="title">Prole.in</div>
-	<div id="red"></div>
-      </div>
-      <div id="main">
-	<div id="top">
-	</div>
-	<div id="yellow">
-	  <div id="content">
-      	    <%= @output || yield %>
-	    <% if request.path_info.match(/blog\//) %>
-      	      <div id="disqus_thread"></div>
-	      <script type="text/javascript" src="http://disqus.com/forums/prole/embed.js"></script>
-	      <noscript><a href="http://disqus.com/forums/prole/?url=ref">View the discussion thread.</a></noscript>
-	      <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-	    <% end %>
-	  </div>
-	</div>
-      <script type="text/javascript">
-      //<![CDATA[
-        (function() {
-          var links = document.getElementsByTagName('a');
-          var query = '?';
-          for(var i = 0; i < links.length; i++) {
-            if(links[i].href.indexOf('#disqus_thread') >= 0) {
-            query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
-          }
-        
-        document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/prole/get_num_replies.js' + query + '"></' + 'script>');
-  })();
-//]]>
-      </script>
-    </div>
-	<div id="bottom">
-	  <div id="blue">home</div>
-	  <div id="afterblue"></div>
-      </div>
+<HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <TITLE>
+    Prole.in
+  </TITLE>
+  <LINK href="/prole.css" rel="stylesheet" type="text/css">
+  <SCRIPT src="/jquery.js" type="text/javascript"></SCRIPT>
+</HEAD><BODY>
+  <DIV id="container">
+    <DIV id="title">
+      <H1>
+        <A href="http://prole.in/">
+          <IMG src="/site-images/prole.png" style="background: transparent; border: 0px solid black;">
+        </A>
+      </H1>
+      <DIV id="nav">
+        <A href="/about">
+          <SPAN class="cap">a</SPAN>
+          bout
+          |
+        </A>
+        <A href="/blog">
+          <SPAN class="cap">b</SPAN>
+          log
+          |
+        </A>
+        <A href="http://github.com/svs">
+          <SPAN class="cap">c</SPAN>
+          ode
+        </A>
+      </DIV>
+    </DIV>
+    <DIV id="content">
+      <% if @title %>
+        <h1><%= @title %></h1>
+      <% end %>	
+      <%= @outout || yield %>
+    </DIV>
+    <DIV id="bottom"></DIV>
+  </DIV>
 
-  </body>
-</html>
+</BODY>
+</HTML>
