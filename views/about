@@ -1,5 +1,12 @@
 Prole.in is the personal website of Siddharth Sharma: aspiring rubyist, linux devotee, jazz fan and Mumbaikar (for the moment)
 
+Some of the stuff I've been working on
+
+table{background: #2f2f2f;color: #c9c9c9; border-radius: 5px; -moz-border-radius: 5px;}.
+| !http://mostfit.in/images/mostfit_logo.png! | "MOSTFIT":http://mostfit.in - The open source MIS for Microfinance. Try out a demo at "http://mostfit.in":http://mostfit.in or check out the source code from "MOSTFIT's github page":http://github.com/svs/misfit |
+| !http://rbus.in/images/rbus-logo.png! | "rbus.in":http://rbus.in - An attempt at building a public transport "vivisystem":http://www.nanodic.com/Nanobio/Vivisystem.htm. check out the source code from "rbus github repo":http://github.com/svs/rbus |
+|{font-size: 3em; text-align: center}. blu.rb | A hacker/designer's blogging engine with github backend and arbitrary layouts possible. Check out the source code from "blu.rb's source code repo":http://github.com/svs/blu.rb |
+
 You can check out some of the code I've written at "my github page":http://github.com/svs
 
 This blog is powered by blu.rb - the hacker's blogging engine. Check out the source code from this "blog's github repository":http://github.com/svs/blog
