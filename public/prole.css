@@ -44,7 +44,7 @@ h1 {
   letter-spacing: -0.06em;
   font-weight: bold;
 }
-h2 { font-size: 2em; }
+h2 { font-size: 1.2em; text-transform: uppercase}
 ul, li { list-style-type: circle; }
 #content { text-align: justify; position: relative; top: -120px;}
 .post {
