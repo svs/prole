@@ -86,3 +86,10 @@ img {
   margin: 4px 10px;
   border: solid 3px white;
 }
+
+table {
+  font-size: 0.8em;
+}
+table img {
+  border: 0px;
+}
