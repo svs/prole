@@ -1,0 +1,10 @@
+<h1>blog</h1>
+<% entries.keys.sort.reverse.each do |d| %>
+  <a class="l" href = <%= "/blog/#{CGI::escape(entries[d][:title])}" %>>
+    <div class="post" style='background: url(<%= "#{entries[d][:pic]}" %>)'>
+      <div class="p">
+        <%= entries[d][:title].split(".")[0] %>
+      </div>
+    </div>
+  </a>
+<% end %>
