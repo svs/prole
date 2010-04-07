@@ -99,6 +99,6 @@ blockquote {
  background: #444;
  -moz-border-radius: 8px;
  border-radius: 8px;
- font-family: Lucida Grande, Arial
+ font-family: 'Lucida Grande', Arial;
  font-size: 0.75em;
 }
