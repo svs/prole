@@ -1,0 +1,51 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Mon May 17 13:13:46 2010
+;; Desktop file format version 206
+;; Emacs version 22.2.1
+
+;; Global section:
+(setq file-name-history '("~/src/prole/views/posts/Democracy or Voting.haml" "~/src/prole/views/posts"))
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/home/svs/src/prole/views/posts/Democracy or Voting.haml"
+  "Democracy or Voting.haml"
+  'haml-mode
+  nil
+  151
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . iso-latin-1)))
+
+(desktop-create-buffer 206
+  "/home/svs/src/prole/views/posts/Technology - What's it good for.haml"
+  "Technology - What's it good for.haml"
+  'haml-mode
+  nil
+  1
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "posts"
+  'dired-mode
+  nil
+  421
+  '(nil nil)
+  t
+  '("/home/svs/src/prole/views/posts/")
+  nil)
+
