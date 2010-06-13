@@ -102,3 +102,17 @@ blockquote {
  font-family: 'Lucida Grande', Arial;
  font-size: 0.75em;
 }
+
+ol.tumblr_posts {
+  list-style-type: none;
+}
+
+.tumblr_title{
+  text-transform: uppercase;
+  color: white;
+  border-bottom: solid grey 1px;
+}
+
+ol.tumblr_posts li {
+  border-bottom: solid 1px darkorange;
+}
