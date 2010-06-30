@@ -98,12 +98,17 @@ table img {
 }
 
 blockquote {
- padding: 20px;
- background: #444;
- -moz-border-radius: 8px;
- border-radius: 8px;
- font-family: 'Lucida Grande', Arial;
- font-size: 0.75em;
+    font: 1.2em/1.6em Georgia, "Times New Roman", Times, serif;
+    width: 80%;
+    background: #c3c3c3;
+    padding-left: 18px;
+    text-indent: -18px;
+
+}
+blockquote:first-letter {
+  background: url(images/open-quote.gif) no-repeat left top;
+  padding-left: 18px;
+  font: italic 1.4em Georgia, "Times New Roman", Times, serif;
 }
 
 ol.tumblr_posts {
