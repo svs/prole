@@ -28,7 +28,7 @@ a {
 }
 #title #nav {
   position: relative;
-  top: -100px;
+  top: -50px;
   left: 250px;
 }
 #title #nav a { color: #fc4303 }
