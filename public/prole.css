@@ -1,12 +1,13 @@
 body {
-  font-family: Palatino, "Times New Roman", "Lucida Sans", Verdana;
-  font-size: 22px;
+  font-family: "Lucida Grande", Palatino, "Times New Roman", "Lucida Sans", Verdana;
+  font-size: 16px;
   margin: 0px;
   padding: 0px;
   margin-left: 20%;
   margin-right: 20%;
-  background: #111;
-  color: #a6a6a6;
+  background: #fff;
+/*  color: #a6a6a6;*/
+  color: #333;
 }
 a {
   text-decoration: none;
@@ -73,6 +74,7 @@ a.l {
   background: url(/site-images/trans.png);
   -moz-opacity: 0.7;
   width: 100%;
+  font-size: 22px;
 }
 
 .p a{
@@ -80,6 +82,7 @@ a.l {
   bottom: 0px;
   width: 100%;
   color: white;
+  font-size: 22px;
 }
 
 img {
