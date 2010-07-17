@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
 LOG_FILE = '/opt/nginx/logs/access.log'
-f = File.open('views/posts/stats','w')
+f = File.open('views/stats','w')
 f.write "<br><br>\n\n"
 hits = `cat #{LOG_FILE} |  awk '{print $7}' | grep haml | wc -l`
 visitors = `awk '{print $1, $7'} < #{LOG_FILE} | grep haml | awk '{print $1}' | sort | uniq | wc -l`
