@@ -1,5 +1,5 @@
 #!/usr/bin/ruby
-f = File.open('stats','w')
+f = File.open('views/posts/stats','w')
 f.write "<br><br>\n\n"
 hits = `cat access.log |  awk '{print $7}' | grep haml | wc -l`
 visitors = `awk '{print $1, $7'} < access.log | grep haml | awk '{print $1}' | sort | uniq | wc -l`
