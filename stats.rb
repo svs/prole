@@ -14,6 +14,8 @@ f.write("\nh2. latest visitors\n\n")
 lv = `tail -n 100 #{LOG_FILE} | awk '{print $1, $7}' | grep haml`.split("\n").map{|x| x.split(" ")}
 lv = lv.map{|v| [`host #{v[0]}`, v[1]]}
 lv.each {|x| f.write("|#{x[0].split(" ")[4]}|#{x[1]}|\n")}
+f.write "\n\nh2. Hits by Month\n\n"
+f.write `cat access.log | awk '{print $4, $7}' | grep haml | awk '{print $1}' | sed -e 's/:[0-9][0-9]//g' -e 's/\\[//' -e 's/[0-9][0-9]\\///' | uniq -c | awk '{print "|",$2,"|",$1,"|"}`
 f.close
 
 
