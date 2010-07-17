@@ -125,3 +125,15 @@ ol.tumblr_posts li {
   list-style-type: none;
   padding-top: 20px;
 }
+
+.hits {
+  font-family: Georgia;
+  font-size: 30px;
+}
+
+th {
+  background-color: #333;
+  color: white;
+  font-size: 1.2em;
+  padding: 4px;
+}
