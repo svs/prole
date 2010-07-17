@@ -44,6 +44,7 @@ h1 {
   font-weight: bold;
 }
 h2 { font-size: 1.2em; text-transform: uppercase}
+h2.day {font-size: 2em; background: #a82222;float:left;padding: 4px;margin: 0px;  box-shadow: 2px 2px 2px #888;}
 ul, li { list-style-type: circle; }
 #content { text-align: justify; position: relative; top: -120px;}
 #container { width: 65%; margin-left: auto; margin-right: auto;}
