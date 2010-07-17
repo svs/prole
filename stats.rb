@@ -11,7 +11,7 @@ f.write(`cat #{LOG_FILE} |  awk '{print $7}' | grep haml | sed 's/?\S*//' | sort
 f.write("\nh2. latest visitors\n\n")
 lv = `tail -n 100 #{LOG_FILE} | awk '{print $1, $7}' | grep haml`.split("\n").map{|x| x.split(" ")}
 lv = lv.map{|v| [`host #{v[0]}`, v[1]]}
-lv.each {|x| f.write("|x[0].split(" ")[4]|x[1]|")}
+lv.each {|x| f.write("|#{x[0].split(" ")[4]}|#{x[1]}|")}
 f.close
 
 
