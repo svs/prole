@@ -1,12 +1,14 @@
 <h1 style="position:relative; top:35px; left: 5px;">blog</h1>
 <% entries.keys.sort.reverse.each do |d| %>
-  <a class="l" href = <%= "/blog/#{CGI::escape(entries[d][:title])}" %>>
-    <div class="post" style='background: url(<%= "#{entries[d][:pic]}" %>)'>
-      <div class="p">
-        <%= entries[d][:title].split(".")[0] %>
+   <div class="post" style="border: 0px;">
+     <a class="l" href = <%= "/blog/#{CGI::escape(entries[d][:title])}" %>>
+      <div class="post" style='background: url(<%= "#{entries[d][:pic]}" %>); width: 100%; '>
+       <div class="p">
+         <%= entries[d][:title].split(".")[0] %>
+       </div>
       </div>
-      <div style="position: relative; bottom: 0px: right: 0px"><h2 class="day"><%= d.day %>/<%= d.month %></h2></div>
-	
-    </div>
-  </a>
+    </a>
+    <div style="position: relative; bottom: 50px; left: 150px;"><h2 class="day"><%= d.day %>/<%= d.month %></h2></div>
+  </div>
+
 <% end %>
