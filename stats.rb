@@ -3,7 +3,7 @@ require 'date'
 LOG_FILE = '/opt/nginx/logs/access.log'
 f = File.open('views/stats','w')
 f.write "<br><br>\n\n"
-f.write "Stats compiled on #{DateTime.now}\n"
+f.write "Stats compiled on #{DateTime.now}\n\n"
 hits = `cat #{LOG_FILE} |  awk '{print $7}' | grep haml | wc -l`
 visitors = `awk '{print $1, $7'} < #{LOG_FILE} | grep haml | awk '{print $1}' | sort | uniq | wc -l`
 f.write("p(hits). *#{hits.rstrip}* hits\n*#{visitors.rstrip}* unique visitors\n\n")
