@@ -1,4 +1,5 @@
 #!/usr/bin/ruby
+require 'date'
 LOG_FILE = '/opt/nginx/logs/access.log'
 f = File.open('views/stats','w')
 f.write "<br><br>\n\n"
