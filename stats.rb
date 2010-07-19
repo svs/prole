@@ -11,7 +11,7 @@ f.write("h2. Most Popular\n\n")
 f.write("|_. Title |_. Hits|\n")
 f.write(`cat #{LOG_FILE} |  awk '{if ($7 ~ /haml/) print $7}' | sed 's/?\S*//' | sort | uniq -c | sort -r -n | head -n 10 | awk '{print "| ", $2," | ",$1," |"}' | sed -e 's/\\/blog\\///' -e 's/\+/ /g' -e 's/\.haml//'`)
 f.write("\nh2. latest visitors\n\n")
-lv = `cat #{LOG_FILE} | awk '{if ($7 ~ /haml/) print $1, $7, $11'}`.split("\n").map{|x| x.split(" ")}
+lv = `tac #{LOG_FILE} | awk '{if ($7 ~ /haml/) print $1, $7, $11}' | head -n 15`.split("\n").map{|x| x.split(" ")}
 lv = lv.map{|v| [`host #{v[0]}`, v[1], v[2]]}
 lv.each {|x| f.write("|#{x[0].split(" ")[4]}|#{x[1]}|#{x[2]}|\n")}
 f.write "\n\nh2. Hits by Month\n\n"
