@@ -17,7 +17,7 @@ lv.each {|x| f.write("|#{x[0].split(" ")[4]}|#{x[1]}|#{x[2]}\n")}
 f.write "\n\nh2. Hits by Month\n\n"
 f.write `cat #{LOG_FILE} | awk '{print $4, $7}' | grep haml | awk '{print $1}' | sed -e 's/:[0-9][0-9]//g' -e 's/\\[//' -e 's/[0-9][0-9]\\///' | uniq -c | awk '{print "|",$2,"|",$1,"|"}'`
 f.write "\n\nh2. Top Referers"
-f.write `cat #{LOG_FILE} | awk '{print $7 ~ /haml/ ? $7 : "_-_", $11}' | more | grep -v "_-_" | awk '{print $2'} | sort | uniq -c | sort -r -n | grep -v "\"-\"" | head -10`
+f.write `cat #{LOG_FILE} | awk '{print $7 ~ /haml/ ? $7 : "_-_", $11}' | more | grep -v "_-_" | awk '{print $2'} | sort | uniq -c | sort -r -n | grep -v "\"-\"" | head -10 | awk '{print "|", $2, "|", $1, "|"}'`
 
 f.close
 
