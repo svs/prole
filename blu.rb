@@ -27,12 +27,17 @@ def entries
   @posts
 end
 
+
 get "/" do
   erb :sexy_blog_index
 end
 
 get "/blog/:title" do
-  _title = params[:title].split(".")
+    create_page(params[:title])
+end
+
+def create_page(title)
+  _title = title.split(".")
   if ["haml","erb"].include?(_title[-1])
     @title = _title[0]
     layout = File.read("views/posts/layouts/_#{_title[1]}.erb") if _title.size == 3
