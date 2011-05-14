@@ -71,8 +71,7 @@ def write_feed(request)
       i = m.items.new_item
       i.title = entry[:title]
       port = request.env["SERVER_PORT"]
-      host_root = "http://#{request.env["SERVER_NAME"]}" + (port == "80" ? "" : ":#{port}")
-      i.link = host_root + "/blog/#{CGI::escape(entry[:title])}"
+      i.link = "http://prole.in/blog/#{CGI::escape(entry[:title])}"
       i.description = RedCloth.new(File.read("views/posts/#{entry[:title]}")).to_html
       i.date = atime
     end
